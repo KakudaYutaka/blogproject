@@ -18,18 +18,16 @@
 
   {% block content %}
     <div class="container">
-    {% for item in object_list %}
     <div class="card">
-      <h5 class="card-header">{{ item.category }}</h5>
+      <h5 class="card-header">{{ object.category }}</h5>
       <div class="card-body">
-        <h5 class="card-title">{{ item.title }}</h5>
-        <p class="card-text">{{ item.postdate }}</p>
+        <h5 class="card-title">{{ object.title }}</h5>
+        <p class="card-text">{{ object.content }}</p>
         <a href="#" class="btn btn-primary">ボタン</a>
       </div>
     </div>
-    {% endfor %}
-    </div>
   {% endblock content %}
+    </div>
 
 
     <!-- Optional JavaScript -->
@@ -39,4 +37,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
-
