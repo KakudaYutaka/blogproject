@@ -14,6 +14,12 @@
   {% extends 'base.html' %}
 
   {% block header %}
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">ブログ</h1>
+      <p class="lead">記事一覧です</p>
+    </div>
+  </div>
   {% endblock header %}
 
   {% block content %}
@@ -23,8 +29,8 @@
       <h5 class="card-header">{{ item.category }}</h5>
       <div class="card-body">
         <h5 class="card-title">{{ item.title }}</h5>
-        <p class="card-text">{{ item.postdate }}</p>
-        <a href="#" class="btn btn-primary">ボタン</a>
+        <h6 class="card-text">{{ item.postdate }}</h6>
+        <a href="{% url 'detail' item.pk %}" class="btn btn-primary">詳細へ</a>
       </div>
     </div>
     {% endfor %}
